@@ -1,0 +1,16 @@
+main: ${PACKAGE}.${NAME}
+name: ${NAME}
+version: "${VERSION}"
+api-version: "26.2"
+author: AUTHOR
+description: DESCRIPTION
+permissions:
+  example.op:
+    description: Operator commands
+    default: op
+
+  example.*:
+    description: All permissions
+    default: false
+    children:
+      example.op: true
